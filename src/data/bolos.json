@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "nome": "Bolo Vulcão de Cenoura",
+    "descricao": "Massa fofinha de cenoura fresca com cobertura exagerada de brigadeiro gourmet.",
+    "preco": 55.00,
+    "categoria": "Caseiros",
+    "imagem": "/img/bolo-cenoura.png",
+    "sabores": ["Cenoura com Chocolate"]
+  },
+  {
+    "id": 2,
+    "nome": "Bolo de Laranja da Vovó",
+    "descricao": "Feito com suco natural da fruta e raspas de laranja. Simples, aromático e perfeito para o café.",
+    "preco": 35.00,
+    "categoria": "Caseiros",
+    "imagem": "/img/bolo-laranja.png",
+    "sabores": ["Laranja"]
+  },
+  {
+    "id": 3,
+    "nome": "Bolo de Chocolate Tradicional",
+    "descricao": "Aquele bolo de chocolate com gostinho de infância. Massa úmida e cobertura de chocolate quentinha.",
+    "preco": 40.00,
+    "categoria": "Caseiros",
+    "imagem": "/img/chocolate-tradicional.png",
+    "sabores": ["Chocolate"]
+  },
+    {
+    "id": 4,
+    "nome": "Maracujá com Calda Rústica",
+    "descricao": "Bolo refrescante com recheio de mousse cremosa e calda brilhante de maracujá com sementes aparentes.",
+    "preco": 80.00,
+    "categoria": "Caseiros",
+    "imagem": "/img/bolo-maracuja.png",
+    "sabores": ["Maracujá"]
+  },
+  {
+    "id": 5,
+    "nome": "Naked Cake Red Velvet",
+    "descricao": "O clássico veludo vermelho! Massa úmida de cacau e corante natural com recheio de cream cheese.",
+    "preco": 140.00,
+    "categoria": "Naked Cake",
+    "imagem": "/img/red-velvet.png",
+    "sabores": ["Red Velvet com Cream Cheese"]
+  },
+  {
+    "id": 6,
+    "nome": "Naked Cake Chocolate Belga",
+    "descricao": "Para chocólatras exigentes: Massa de cacau black, recheio de brigadeiro belga meio amargo e gotas de chocolate.",
+    "preco": 160.00,
+    "categoria": "Naked Cake",
+    "imagem": "/img/chocolate-belga.png",
+    "sabores": ["Chocolate Belga Trufado"]
+  },
+  {
+    "id": 7,
+    "nome": "Bento Cake 'Flork'",
+    "descricao": "Bolinho divertido com o boneco Flork e frase personalizada. Escolha o sabor:",
+    "preco": 45.00,
+    "categoria": "Bento Cake",
+    "imagem": "/img/bento-cake.png",
+    "sabores": ["Baunilha com Brigadeiro", "Cenoura com Chocolate", "Red Velvet", "Ninho com Nutella"]
+  },
+  {
+    "id": 8,
+    "nome": "Aniversário Tradicional",
+    "descricao": "Bolo festivo com acabamento dourado e texturas. Acompanha vela. Escolha a massa e recheio de sua preferência:",
+    "preco": 150.00,
+    "categoria": "Aniversário",
+    "imagem": "/img/aniversario-tradicional.png",
+    "sabores": ["Brigadeiro", "Beijinho", "Abacaxi com Coco", "Mousse de Maracujá", "Ninho com Morango"]
+  },
+  {
+    "id": 9,
+    "nome": "Aniversário Balloon Cake",
+    "descricao": "Bolo alto decorado com balões no topo e confetes. Escolha a massa e recheio de sua preferência:",
+    "preco": 180.00,
+    "categoria": "Aniversário",
+    "imagem": "/img/aniversario-ballon.png",
+    "sabores": ["Chocolate Belga", "Baunilha com Frutas Vermelhas", "Floresta Negra", "Doce de Leite com Ameixa"]
+  },
+  {
+    "id": 10,
+    "nome": "Casamento Clássico 4 Andares",
+    "descricao": "Acabamento tradicional em pasta americana branca e flores de açúcar. Escolha a combinação de sabores:",
+    "preco": 580.00,
+    "categoria": "Casamento",
+    "imagem": "/img/casamento-classico.png",
+    "sabores": ["Damasco com Amêndoas", "Bem Casado (Doce de Leite)", "Pistache", "Champagne com Morangos"]
+  },
+  {
+    "id": 11,
+    "nome": "Casamento Rústico (Seminaked)",
+    "descricao": "Acabamento espatulado com flores naturais. Escolha a combinação de sabores para o grande dia:",
+    "preco": 420.00,
+    "categoria": "Casamento",
+    "imagem": "/img/casamento-rustico.png",
+    "sabores": ["Limão Siciliano com Mirtilo", "Baunilha com Frutas Vermelhas", "Nozes com Estrogonofe de Nozes"]
+  },
+  {
+    "id": 12,
+    "nome": "Bolo Personalizado (Sua Ideia)",
+    "descricao": "Este valor é o mínimo para bolos de 1kg. O preço final pode variar de acordo com a complexidade da decoração solicitada.",
+    "preco": 100.00,
+    "categoria": "Personalizados",
+    "imagem": "/img/bolo-personalizado.png",
+    "sabores": ["Chocolate Belga", "Baunilha com Morango", "Ninho com Nutella", "Red Velvet", "Abacaxi com Coco", "Prestigio"]
+  },
+  {
+    "id": 13,
+    "nome": "Vela Numérica",
+    "descricao": "Vela especial em formato de número para personalizar a idade. Informe o número desejado nas observações.",
+    "preco": 8.00,
+    "categoria": "Acessórios",
+    "imagem": "/img/vela-numerica.png",
+    "sabores": []
+  },
+  {
+    "id": 14,
+    "nome": "Vela Palito",
+    "descricao": "Kit de velas tradicionais estilo palito (kit com 8 unidades) para decorar seu bolo.",
+    "preco": 4.50,
+    "categoria": "Acessórios",
+    "imagem": "/img/vela-palito.png",
+    "sabores": []
+  }
+]
