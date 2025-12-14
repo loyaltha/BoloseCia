@@ -142,8 +142,8 @@ const Contato = () => {
                   <div>
                     <h3 className="font-bold text-[#2C1A12] text-lg mb-1">E-mail</h3>
                     <p className="text-[#666] text-sm leading-relaxed">
-                      contato@doceencanto.com.br<br />
-                      pedidos@doceencanto.com.br
+                      contato@bolosecia.com.br<br />
+                      pedidos@bolosecia.com.br
                     </p>
                   </div>
                 </div>
