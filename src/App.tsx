@@ -13,7 +13,7 @@ import { PoliticaPrivacidade } from './pages/PoliticaPrivacidade';
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/BoloseCia">
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
