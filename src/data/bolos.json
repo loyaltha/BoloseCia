@@ -110,19 +110,19 @@
   {
     "id": 13,
     "nome": "Vela Numérica",
-    "descricao": "Vela especial em formato de número para personalizar a idade. Informe o número desejado nas observações.",
+    "descricao": "Vela especial em formato de número para personalizar a idade. Escolha a COR abaixo e informe o NÚMERO desejado no campo de observações.",
     "preco": 8.00,
     "categoria": "Acessórios",
     "imagem": "./img/vela-numerica.png",
-    "sabores": []
+    "sabores": ["Dourada", "Rosa", "Prata", "Azul"]
   },
   {
     "id": 14,
     "nome": "Vela Palito",
-    "descricao": "Kit de velas tradicionais estilo palito (kit com 8 unidades) para decorar seu bolo.",
+    "descricao": "Kit de velas tradicionais estilo palito (kit com 8 unidades) para decorar seu bolo. Escolha a cor predominante.",
     "preco": 4.50,
     "categoria": "Acessórios",
     "imagem": "./img/vela-palito.jpg",
-    "sabores": []
+    "sabores": ["Colorida", "Azul", "Branca", "Rosa", "Vermelho", "Laranja", "Amarelo", "Verde", "Roxa"]
   }
 ]

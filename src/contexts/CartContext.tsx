@@ -3,12 +3,11 @@ import { createContext, ReactNode, useContext, useState, useMemo } from "react";
 // Tipos base para o projeto
 export interface Product {
   id: number;
-  name: string;
-  price: number;
-  image: string;
-  
-  description_full?: string; 
-  description_short?: string; 
+  nome: string;       
+  preco: number;      
+  imagem: string;     
+  descricao?: string; 
+  sabores?: string[];
 }
 
 export interface CartItem extends Product {
@@ -31,7 +30,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Cálculo de total e contagem (usa useMemo para otimizar)
   const { cartCount, cartTotal } = useMemo(() => {
-    const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const total = cartItems.reduce((acc, item) => acc + (item.preco * item.quantity), 0);
     const count = cartItems.reduce((acc, item) => acc + item.quantity, 0);
     return { cartTotal: total, cartCount: count };
   }, [cartItems]);

@@ -29,7 +29,7 @@ export function Produto() {
   // Função para adicionar o produto e a quantidade ao contexto
   const handleAddToCart = () => {
     addToCart(product, quantity);
-    alert(`${product.name} (${quantity} un.) adicionado ao carrinho!`);
+    alert(`${product.nome} (${quantity} un.) adicionado ao carrinho!`);
   };
 
   return (
@@ -39,22 +39,22 @@ export function Produto() {
         {/* Imagem do Produto */}
         <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
           <img 
-            src={product.image || 'placeholder.jpg'}
-            alt={product.name}
+            src={product.imagem || 'placeholder.jpg'}
+            alt={product.nome}
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Detalhes e Ações */}
         <div className="p-4">
-          <h1 className="text-5xl font-serif text-[#2C1A12] font-bold mb-4">{product.name}</h1>
+          <h1 className="text-5xl font-serif text-[#2C1A12] font-bold mb-4">{product.nome}</h1>
           <p className="text-3xl text-[#593518] font-semibold mb-6">
-            {formatCurrency(product.price)}
+            {formatCurrency(product.preco)}
           </p>
           
           <p className="text-[#666666] leading-relaxed mb-8">
             {/* Descrição detalhada do produto */}
-            {product.description_full || 'Descrição detalhada do bolo, ingredientes e dicas de conservação: Feito com ingredientes frescos e amor. Ideal para qualquer celebração.'}
+            {product.descricao || 'Descrição detalhada do bolo, ingredientes e dicas de conservação: Feito com ingredientes frescos e amor. Ideal para qualquer celebração.'}
           </p>
           
           {/* Controle de Quantidade e Botão */}

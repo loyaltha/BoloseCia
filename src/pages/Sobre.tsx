@@ -19,7 +19,7 @@ const Sobre = () => {
           {/* Imagem */}
           <div className="relative h-[500px] w-full rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/img/confeitaria.png" 
+              src="img/confeitaria.jpg" 
               alt="Chef confeiteiro" 
               className="object-cover w-full h-full"
             />

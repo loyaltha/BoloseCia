@@ -1,58 +1,66 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useCart, Product } from '../contexts/CartContext'; 
+import { ShoppingCart } from 'lucide-react';
 
-interface Bolo {
-  id: number; 
+// Tipagem dos dados do bolo
+export interface Bolo {
+  id: number;
   nome: string;
   preco: number;
   imagem: string;
   descricao: string;
   categoria: string;
+  sabores?: string[];
 }
 
 interface BoloCardProps {
   bolo: Bolo;
+  // Agora o card espera receber a função que abre o modal
+  onOpenModal?: (bolo: Bolo) => void;
 }
 
-export function BoloCard({ bolo }: BoloCardProps) {
-  const { addToCart } = useCart(); 
+export function BoloCard({ bolo, onOpenModal }: BoloCardProps) {
 
-  // Mapeia o tipo Bolo para o tipo Product que o Contexto espera
-  const productData: Product = {
-    id: bolo.id,
-    name: bolo.nome,
-    price: bolo.preco,
-    image: bolo.imagem,
-  };
-
-  const handleAdicionarAoCarrinho = (e: React.MouseEvent) => {
-    e.preventDefault(); 
-    e.stopPropagation(); 
+  // Função que lida com o clique no card
+  const handleClick = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     
-    addToCart(productData); 
-    
-    // Feedback visual
-    console.log(`${bolo.nome} adicionado ao carrinho!`);
-    alert(`${bolo.nome} adicionado ao carrinho!`); 
+    // Se a página (Home ou Catalogo) mandou a função de abrir modal, execute-a
+    if (onOpenModal) {
+      onOpenModal(bolo);
+    } else {
+      console.log("Clique no card (função do modal não fornecida)");
+    }
   };
 
   return (
-    <Link 
-      to={`/produto/${bolo.id}`} 
-      className="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-[#E6DCCF] flex flex-col h-full"
+    <div 
+      className="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-[#E6DCCF] flex flex-col h-full cursor-pointer relative"
+      onClick={handleClick}
     >
       
-      {/* 1. IMAGEM DO BOLO */}
-      <div className="overflow-hidden h-64 relative">
+      {/* 1. IMAGEM DO BOLO COM EFEITO HOVER */}
+      <div className="overflow-hidden h-64 relative group">
         <img 
           src={bolo.imagem} 
           alt={bolo.nome} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
         />
-        <span className="absolute top-4 right-4 bg-[#FFFBF2] text-[#4A2C1D] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+        
+        {/* Etiqueta de Categoria */}
+        <span className="absolute top-4 right-4 bg-[#FFFBF2] text-[#4A2C1D] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md z-10">
           {bolo.categoria}
         </span>
+
+        {/* --- AQUI ESTÁ A MÁGICA DO HOVER --- */}
+        {/* Camada escura com botão "Ver Detalhes" que aparece ao passar o mouse */}
+        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-0">
+            <span className="bg-white/90 text-[#4A2C1D] px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm transform scale-95 group-hover:scale-100 transition-transform">
+                Ver Detalhes
+            </span>
+        </div>
       </div>
       
       {/* 2. CONTEÚDO (Nome, Descrição e Preço) */}
@@ -70,30 +78,19 @@ export function BoloCard({ bolo }: BoloCardProps) {
           <div className="flex flex-col">
             <span className="text-xs text-[#85746D] uppercase">A partir de</span>
             <span className="text-xl font-bold text-[#4A2C1D]">
-              R$ {bolo.preco.toFixed(2).replace('.', ',')}
+              {bolo.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
             </span>
           </div> 
 
           <button
-            onClick={handleAdicionarAoCarrinho}
+            onClick={handleClick}
             className="inline-flex items-center gap-2 px-4 py-2 bg-[#4A2C1D] text-[#FFFBF2] font-medium rounded-lg hover:bg-[#594A42] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
           >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="20" 
-              height="20" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor" 
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
+            <ShoppingCart size={20} />
             Adicionar
           </button>
         </div>
       </div>
-
-    </Link>
+    </div>
   );
 }

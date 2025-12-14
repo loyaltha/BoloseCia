@@ -41,22 +41,22 @@ export function Carrinho() {
               
               {/* Imagem */}
               <img 
-                src={item.image} 
-                alt={item.name} 
+                src={item.imagem} 
+                alt={item.nome} 
                 className="w-20 h-20 object-cover rounded-lg mr-6 flex-shrink-0"
               />
               
               <div className="flex-grow">
                 {/* Nome do Produto */}
                 <Link to={`/produto/${item.id}`} className="text-xl font-semibold text-[#2C1A12] hover:text-[#5b2c0d] transition">
-                  {item.name}
+                  {item.nome}
                 </Link>
                 
                 {/* Preço Unitário */}
-                <p className="text-sm text-[#787165]">Preço unitário: {formatCurrency(item.price)}</p>
+                <p className="text-sm text-[#787165]">Preço unitário: {formatCurrency(item.preco)}</p>
                 
                 {/* Subtotal */}
-                <p className="font-bold text-[#5b2c0d] mt-1">Subtotal: {formatCurrency(item.price * item.quantity)}</p>
+                <p className="font-bold text-[#5b2c0d] mt-1">Subtotal: {formatCurrency(item.preco * item.quantity)}</p>
               </div>
 
               {/* Controles de Quantidade */}
@@ -139,7 +139,7 @@ export function Carrinho() {
               Finalizar Compra
             </button>
             
-            <p className="text-xs text-[#787165] mt-4 text-center">*Frete grátis simulado para demonstração.</p>
+            <p className="text-xs text-[#787165] mt-4 text-center">*O valor do frete pode variar conforme o CEP de entrega.</p>
           </div>
         </div>
       </div>
