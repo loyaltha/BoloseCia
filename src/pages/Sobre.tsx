@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Sobre = () => {
   return (
     <div className="min-h-screen bg-[#FDFBF7] text-[#4A4A4A] font-sans">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contato = () => {
   return (
     <div className="min-h-screen font-sans text-[#4A4A4A]">

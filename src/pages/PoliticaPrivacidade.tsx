@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function PoliticaPrivacidade() {
   return (
     <div className="container mx-auto px-6 py-12 md:py-20 font-sans text-[#4A4A4A] bg-[#fcf8f1]">
